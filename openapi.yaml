@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: Test Case Logger
+  version: 1.0.0
+servers:
+  - url: https://script.google.com/macros/s/AKfycbycvsrp0cS5TTomfp0_hwjEKYlXCzYbHCcikl-8_hN2ykyZOWpMJ4Tfg_c1CGfCdvms/exec
+paths:
+  /addTestCase:
+    post:
+      summary: Log a new GPT test case to Google Sheets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: The name of the test case
+                goal:
+                  type: string
+                  description: What the test case is designed to evaluate
+                userPrompt:
+                  type: string
+                  description: The input message the user would send
+                expectedOutput:
+                  type: string
+                  description: The correct response or evaluation rubric
+              required:
+                - title
+                - goal
+                - userPrompt
+                - expectedOutput
+      responses:
+        '200':
+          description: Confirmation that the test case was logged
