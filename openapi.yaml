@@ -3,7 +3,8 @@ info:
   title: Test Case Logger
   version: 1.0.0
 servers:
-  - url: https://script.google.com/macros/s/AKfycbycvsrp0cS5TTomfp0_hwjEKYlXCzYbHCcikl-8_hN2ykyZOWpMJ4Tfg_c1CGfCdvms/exec
+  - servers:
+  - url: https://script.google.com/macros/s/AKfycbw6Z4z_T1zMQbOJvXnvMkyQvP2QA_zYtEKB92kxrH2F7JuI1pL2O5OeFbTXhpy5UQ/exec
 paths:
   /addTestCase:
     post:
